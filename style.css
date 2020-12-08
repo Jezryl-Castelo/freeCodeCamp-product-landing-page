@@ -1,17 +1,13 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:white;
-    font-family: 'Roboto', sans-serif;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/*----Nav Bar----*/
 #header {
     width: 100%;
     display: flex;
@@ -30,13 +26,12 @@ li {
     font-weight: 600;
 }
 
+#nav-bar {
+    padding-top: 40px;   
+}
 #header-img {
     cursor: pointer;
     height: 100px;
-}
-
-#nav-bar {
-    padding-top: 40px;   
 }
 
 ul, li {
@@ -59,7 +54,12 @@ a:hover {
     color: pink;
 }
 
-/* title */
+/*----title----*/
+.title {
+    grid: flex;
+    padding: 20px 100px 10px 100px;
+    margin-bottom: 10px;
+}
 
 h1 {
     text-align: center;  
@@ -73,39 +73,22 @@ h2 {
     margin-top: 20px;
 }
 
+/*----Cards----*/
 .cards {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.title {
-    grid: flex;
-    padding: 20px 100px 10px 100px;
-    margin-bottom: 10px;
-}
-
-.centered {
-    align-items: center;
-    justify-content: center; 
-    flex-direction: row; 
-    grid: flex;
-}
-
-#cards {
-    display: flex;
-    justify-content: space-between;
-    
-    flex-wrap: wrap;
-    margin-top: 0;  
-}
 .item {
     display: grid;
     align-items: center;
-    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
-/*card styling */
+/*--Card Styling----*/
 p  {
     margin: 10px;
 }
@@ -131,7 +114,6 @@ p  {
 button {
     background-color: rgb(244, 206, 111);
     border: 1px solid rgb(244, 206, 111);
-    
     cursor: pointer;
     position: relative;
     text-transform: uppercase;
@@ -144,15 +126,13 @@ button:hover {
     background:  rgb(247, 196, 68);
     padding: 12px 26px;        
 }
-/* video */
+/*----Video----*/
 #video-link {
    text-align: center;
    margin-bottom: 50px;    
 }
 
-
-
-/* form */
+/*----Form----*/
 #signup-link {
     align-items: center;
     text-align: center;
@@ -185,10 +165,44 @@ label {
     border: 1px solid rgb(244, 206, 111);
 }
 
-@media (max-width: 800px) {
+
+@media only screen and (max-width: 768px) {
+    ul, li {
+        padding-right: 0; 
+        display: block;
+        text-align: right;
+        padding-bottom: 5px;
+    }
+    h1,
+    h2 {
+        width: 550px;
+        padding: 20px;
+        margin: 0 auto;
+    } 
+}
+
+@media only screen and (max-width: 516px) {
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image {
+        margin: 0 auto;
+    }
+
+    .item img {
+        width: 560px;
+       
+    }
+}
+/*@media (max-width: 800px) {
     .cards{
         justify-content: center;
     }
+    
   }
 
 @media (max-width: 700px) {
@@ -198,5 +212,5 @@ label {
         text-align: right;
         padding-bottom: 5px;
   }
-} 
   
+  */
